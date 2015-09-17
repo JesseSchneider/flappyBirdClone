@@ -18,6 +18,7 @@ class GameScene: SKScene {
         createPlayer()
         createSky()
         createBackground()
+        createGround()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -25,10 +26,10 @@ class GameScene: SKScene {
         
         
     }
-   
+    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-    
+        
         
     }
     
@@ -52,7 +53,7 @@ class GameScene: SKScene {
         let topSky = SKSpriteNode(color: UIColor(hue: 0.55, saturation: 0.14, brightness: 0.97, alpha: 1), size: CGSize(width: frame.width, height: frame.height * 0.67))
         
         let bottomSky = SKSpriteNode(color: UIColor(hue: 0.55, saturation: 0.16, brightness: 0.96, alpha: 1), size: CGSize(width: frame.width, height: frame.height * 0.33))
- 
+        
         topSky.anchorPoint = CGPoint(x: 0.5, y: 1)
         
         topSky.position = CGPoint(x: CGRectGetMidX(frame), y: frame.size.height)
@@ -82,6 +83,25 @@ class GameScene: SKScene {
             let moveForever = SKAction.repeatActionForever(moveLoop)
             
             background.runAction(moveForever)
+        }
+    }
+    
+    func createGround () {
+        let groundTexture = SKTexture(imageNamed: "ground")
+        
+        for i in 0 ... 1 {
+            let ground = SKSpriteNode(texture: groundTexture)
+            ground.zPosition = -10
+            ground.position = CGPoint(x: (groundTexture.size().width / 2.0 + (groundTexture.size().width * CGFloat(i))), y: groundTexture.size().height / 2)
+            
+            addChild(ground)
+            
+            let moveLeft = SKAction.moveByX(-groundTexture.size().width, y: 0, duration: 5)
+            let moveReset = SKAction.moveByX(groundTexture.size().width, y: 0, duration: 0)
+            let moveLoop = SKAction.sequence([moveLeft, moveReset])
+            let moveForever = SKAction.repeatActionForever(moveLoop)
+            
+            ground.runAction(moveForever)
         }
     }
 }
