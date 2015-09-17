@@ -20,6 +20,7 @@ class GameScene: SKScene {
         createSky()
         createBackground()
         createGround()
+        createRocks()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -133,25 +134,38 @@ class GameScene: SKScene {
         let xPosition = frame.width + topRock.frame.width
         
         let max = Int(frame.height / 3)
-        let rand = GKRandomDistribution(lowestValue: -100, highestValue: max)
-        let yPosition = CGFloat(rand.nextInt())
         
-        // this next value affects the width of the gap between rocks
-        // make it smaller to make your game harder – if you're feeling evil!
-        let rockDistance: CGFloat = 70
+        if #available(iOS 9.0, *) {
+            let rand = GKRandomDistribution(lowestValue: -100, highestValue: max)
+            let yPosition = CGFloat(rand.nextInt())
+            // this next value affects the width of the gap between rocks
+            // make it smaller to make your game harder – if you're feeling evil!
+            let rockDistance: CGFloat = 70
+            
+            // 4. Position the rocks just off the right edge of the screen, then animate them across to the left edge. When they are safely off the left edge, remove them from the game.
+            topRock.position = CGPoint(x: xPosition, y: yPosition + topRock.size.height + rockDistance)
+            bottomRock.position = CGPoint(x: xPosition, y: yPosition - rockDistance)
+            rockCollision.position = CGPoint(x: xPosition + (rockCollision.size.width * 2), y: CGRectGetMidY(frame))
+            
+            let endPosition = frame.width + (topRock.frame.width * 2)
+            
+            let moveAction = SKAction.moveByX(-endPosition, y: 0, duration: 5.8)
+            let moveSequence = SKAction.sequence([moveAction, SKAction.removeFromParent()])
+            topRock.runAction(moveSequence)
+            bottomRock.runAction(moveSequence)
+            rockCollision.runAction(moveSequence)
+            
+        }
         
-        // 4. Position the rocks just off the right edge of the screen, then animate them across to the left edge. When they are safely off the left edge, remove them from the game.
-        topRock.position = CGPoint(x: xPosition, y: yPosition + topRock.size.height + rockDistance)
-        bottomRock.position = CGPoint(x: xPosition, y: yPosition - rockDistance)
-        rockCollision.position = CGPoint(x: xPosition + (rockCollision.size.width * 2), y: CGRectGetMidY(frame))
-        
-        let endPosition = frame.width + (topRock.frame.width * 2)
-        
-        let moveAction = SKAction.moveByX(-endPosition, y: 0, duration: 5.8)
-        let moveSequence = SKAction.sequence([moveAction, SKAction.removeFromParent()])
-        topRock.runAction(moveSequence)
-        bottomRock.runAction(moveSequence)
-        rockCollision.runAction(moveSequence)
+        else {
+            let myAlert = UIAlertController (title: "Need iOS 9", message: "Go download iOS 9", preferredStyle: .Alert)
+            let alertAction = UIAlertAction (title: "OK", style: .Default, handler: nil)
+            myAlert.addAction(alertAction)
+            
+            let rootController = UIApplication .sharedApplication().delegate!.window!?.rootViewController
+            rootController!.presentViewController(myAlert, animated: true) {
+            }
+        }
     }
 }
 
