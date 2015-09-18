@@ -158,15 +158,10 @@ class GameScene: SKScene {
         }
         
         else {
-            let myAlert = UIAlertController (title: "Need iOS 9", message: "Go download iOS 9", preferredStyle: .Alert)
-            let alertAction = UIAlertAction (title: "OK", style: .Default, handler: nil)
-            myAlert.addAction(alertAction)
-            
-            let rootController = UIApplication .sharedApplication().delegate!.window!?.rootViewController
-            rootController!.presentViewController(myAlert, animated: true) {
-            }
+            // TODO: Handle for iOS 8
         }
     }
+
 }
 
 
