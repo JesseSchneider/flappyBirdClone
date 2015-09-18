@@ -13,6 +13,14 @@ class GameScene: SKScene {
     
     var player: SKSpriteNode!
     
+    var scoreLabel: SKLabelNode!
+    
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "SCORE: \(score)"
+        }
+    }
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         
@@ -20,7 +28,8 @@ class GameScene: SKScene {
         createSky()
         createBackground()
         createGround()
-        createRocks()
+        initRocks()
+        createScore()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -160,6 +169,29 @@ class GameScene: SKScene {
         else {
             // TODO: Handle for iOS 8
         }
+    }
+    
+    func initRocks() {
+        let create = SKAction.runBlock { [unowned self] in
+            self.createRocks()
+        }
+        
+        let wait = SKAction.waitForDuration(3)
+        let sequence = SKAction.sequence([create, wait])
+        let repeatForever = SKAction.repeatActionForever(sequence)
+        
+        runAction(repeatForever)
+    }
+    
+    func createScore() {
+        scoreLabel = SKLabelNode(fontNamed: "Optima-ExtraBlack")
+        scoreLabel.fontSize = 24
+        scoreLabel.position = CGPointMake(CGRectGetMaxX(frame) - 20, CGRectGetMaxY(frame) - 40)
+        scoreLabel.horizontalAlignmentMode = .Right
+        scoreLabel.text = "SCORE: 0"
+        scoreLabel.fontColor = UIColor.blackColor()
+        
+        addChild(scoreLabel)
     }
 
 }
