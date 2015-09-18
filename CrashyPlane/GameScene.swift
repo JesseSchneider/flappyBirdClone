@@ -252,7 +252,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let endPosition = frame.width + (topRock.frame.width * 2)
         
-        let moveAction = SKAction.moveByX(-endPosition, y: 0, duration: 5.8)
+        let moveAction = SKAction.moveByX(-endPosition, y: 0, duration: 5)
         let moveSequence = SKAction.sequence([moveAction, SKAction.removeFromParent()])
         topRock.runAction(moveSequence)
         bottomRock.runAction(moveSequence)
