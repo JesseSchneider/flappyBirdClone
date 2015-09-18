@@ -68,12 +68,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             player.physicsBody?.applyImpulse(CGVectorMake(0, 20))
             
         case .Dead:
-            break
+            let scene = GameScene(fileNamed: "GameScene")!
+            scene.scaleMode = .ResizeFill
+            let transition = SKTransition.moveInWithDirection(SKTransitionDirection.Right, duration: 1)
+            self.view?.presentScene(scene, transition: transition)
         }
     }
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+
+        guard player != nil else { return }
+
         let value = player.physicsBody!.velocity.dy * 0.001
         let rotate = SKAction.rotateToAngle(value, duration: 0.1)
         
@@ -104,6 +110,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let sound = SKAction.playSoundFileNamed("explosion.wav", waitForCompletion: false)
             runAction(sound)
+            
+            gameOver.alpha = 1
+            gameState = .Dead
+            backgroundMusic.runAction(SKAction.stop())
             
             player.removeFromParent()
             speed = 0
@@ -212,7 +222,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         // 2. Create a third sprite that is a large red rectangle. This will be positioned just after the rocks and will be used to track when the player has passed through the rocks safely – if they touch that red rectangle, they should score a point. (Don't worry, we'll make it invisible later!)
-        let rockCollision = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width: 32, height: frame.height))
+        let rockCollision = SKSpriteNode(color: UIColor.clearColor(), size: CGSize(width: 32, height: frame.height))
         
         rockCollision.physicsBody = SKPhysicsBody(rectangleOfSize: rockCollision.size)
         rockCollision.physicsBody?.dynamic = false
