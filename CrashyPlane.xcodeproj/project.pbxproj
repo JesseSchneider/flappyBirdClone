@@ -19,26 +19,7 @@
 		5AF57E741BA1DD2700D60F7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF57E721BA1DD2700D60F7E /* Main.storyboard */; };
 		5AF57E761BA1DD2700D60F7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF57E751BA1DD2700D60F7E /* Assets.xcassets */; };
 		5AF57E791BA1DD2700D60F7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF57E771BA1DD2700D60F7E /* LaunchScreen.storyboard */; };
-		5AF57E841BA1DD2700D60F7E /* CrashyPlaneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF57E831BA1DD2700D60F7E /* CrashyPlaneTests.swift */; };
-		5AF57E8F1BA1DD2700D60F7E /* CrashyPlaneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF57E8E1BA1DD2700D60F7E /* CrashyPlaneUITests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5AF57E801BA1DD2700D60F7E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5AF57E5F1BA1DD2700D60F7E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5AF57E661BA1DD2700D60F7E;
-			remoteInfo = CrashyPlane;
-		};
-		5AF57E8B1BA1DD2700D60F7E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5AF57E5F1BA1DD2700D60F7E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5AF57E661BA1DD2700D60F7E;
-			remoteInfo = CrashyPlane;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5AE835401BA1E8AC007AB4AF /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = coin.wav; path = Assets/coin.wav; sourceTree = "<group>"; };
@@ -55,30 +36,14 @@
 		5AF57E751BA1DD2700D60F7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AF57E781BA1DD2700D60F7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AF57E7A1BA1DD2700D60F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AF57E7F1BA1DD2700D60F7E /* CrashyPlaneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrashyPlaneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF57E831BA1DD2700D60F7E /* CrashyPlaneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashyPlaneTests.swift; sourceTree = "<group>"; };
 		5AF57E851BA1DD2700D60F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AF57E8A1BA1DD2700D60F7E /* CrashyPlaneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrashyPlaneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF57E8E1BA1DD2700D60F7E /* CrashyPlaneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashyPlaneUITests.swift; sourceTree = "<group>"; };
 		5AF57E901BA1DD2700D60F7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5AF57E641BA1DD2700D60F7E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AF57E7C1BA1DD2700D60F7E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AF57E871BA1DD2700D60F7E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -114,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				5AF57E671BA1DD2700D60F7E /* CrashyPlane.app */,
-				5AF57E7F1BA1DD2700D60F7E /* CrashyPlaneTests.xctest */,
-				5AF57E8A1BA1DD2700D60F7E /* CrashyPlaneUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,42 +138,6 @@
 			productReference = 5AF57E671BA1DD2700D60F7E /* CrashyPlane.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5AF57E7E1BA1DD2700D60F7E /* CrashyPlaneTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5AF57E961BA1DD2700D60F7E /* Build configuration list for PBXNativeTarget "CrashyPlaneTests" */;
-			buildPhases = (
-				5AF57E7B1BA1DD2700D60F7E /* Sources */,
-				5AF57E7C1BA1DD2700D60F7E /* Frameworks */,
-				5AF57E7D1BA1DD2700D60F7E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5AF57E811BA1DD2700D60F7E /* PBXTargetDependency */,
-			);
-			name = CrashyPlaneTests;
-			productName = CrashyPlaneTests;
-			productReference = 5AF57E7F1BA1DD2700D60F7E /* CrashyPlaneTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5AF57E891BA1DD2700D60F7E /* CrashyPlaneUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5AF57E991BA1DD2700D60F7E /* Build configuration list for PBXNativeTarget "CrashyPlaneUITests" */;
-			buildPhases = (
-				5AF57E861BA1DD2700D60F7E /* Sources */,
-				5AF57E871BA1DD2700D60F7E /* Frameworks */,
-				5AF57E881BA1DD2700D60F7E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5AF57E8C1BA1DD2700D60F7E /* PBXTargetDependency */,
-			);
-			name = CrashyPlaneUITests;
-			productName = CrashyPlaneUITests;
-			productReference = 5AF57E8A1BA1DD2700D60F7E /* CrashyPlaneUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,14 +149,6 @@
 				TargetAttributes = {
 					5AF57E661BA1DD2700D60F7E = {
 						CreatedOnToolsVersion = 7.0;
-					};
-					5AF57E7E1BA1DD2700D60F7E = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 5AF57E661BA1DD2700D60F7E;
-					};
-					5AF57E891BA1DD2700D60F7E = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 5AF57E661BA1DD2700D60F7E;
 					};
 				};
 			};
@@ -247,8 +166,6 @@
 			projectRoot = "";
 			targets = (
 				5AF57E661BA1DD2700D60F7E /* CrashyPlane */,
-				5AF57E7E1BA1DD2700D60F7E /* CrashyPlaneTests */,
-				5AF57E891BA1DD2700D60F7E /* CrashyPlaneUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -267,20 +184,6 @@
 				5AE835791BA1E8AC007AB4AF /* music.m4a in Resources */,
 				5AF57E741BA1DD2700D60F7E /* Main.storyboard in Resources */,
 				5AE8357C1BA1E8AC007AB4AF /* spark.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AF57E7D1BA1DD2700D60F7E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AF57E881BA1DD2700D60F7E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,36 +216,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5AF57E7B1BA1DD2700D60F7E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AF57E841BA1DD2700D60F7E /* CrashyPlaneTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AF57E861BA1DD2700D60F7E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AF57E8F1BA1DD2700D60F7E /* CrashyPlaneUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5AF57E811BA1DD2700D60F7E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5AF57E661BA1DD2700D60F7E /* CrashyPlane */;
-			targetProxy = 5AF57E801BA1DD2700D60F7E /* PBXContainerItemProxy */;
-		};
-		5AF57E8C1BA1DD2700D60F7E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5AF57E661BA1DD2700D60F7E /* CrashyPlane */;
-			targetProxy = 5AF57E8B1BA1DD2700D60F7E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5AF57E721BA1DD2700D60F7E /* Main.storyboard */ = {
@@ -404,6 +278,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SHARED_PRECOMPS_DIR = "$(CACHE_ROOT)/SharedPrecompiledHeaders";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -442,6 +317,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SHARED_PRECOMPS_DIR = "$(CACHE_ROOT)/SharedPrecompiledHeaders";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -451,10 +327,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CrashyPlane/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DogOnAHorse.CrashyPlane;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -462,60 +340,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CrashyPlane/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DogOnAHorse.CrashyPlane;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		5AF57E971BA1DD2700D60F7E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = CrashyPlaneTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DogOnAHorse.CrashyPlaneTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrashyPlane.app/CrashyPlane";
-			};
-			name = Debug;
-		};
-		5AF57E981BA1DD2700D60F7E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CrashyPlaneTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DogOnAHorse.CrashyPlaneTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrashyPlane.app/CrashyPlane";
-			};
-			name = Release;
-		};
-		5AF57E9A1BA1DD2700D60F7E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = CrashyPlaneUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DogOnAHorse.CrashyPlaneUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = CrashyPlane;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		5AF57E9B1BA1DD2700D60F7E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CrashyPlaneUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DogOnAHorse.CrashyPlaneUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = CrashyPlane;
-				USES_XCTRUNNER = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -536,24 +366,6 @@
 			buildConfigurations = (
 				5AF57E941BA1DD2700D60F7E /* Debug */,
 				5AF57E951BA1DD2700D60F7E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5AF57E961BA1DD2700D60F7E /* Build configuration list for PBXNativeTarget "CrashyPlaneTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5AF57E971BA1DD2700D60F7E /* Debug */,
-				5AF57E981BA1DD2700D60F7E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5AF57E991BA1DD2700D60F7E /* Build configuration list for PBXNativeTarget "CrashyPlaneUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5AF57E9A1BA1DD2700D60F7E /* Debug */,
-				5AF57E9B1BA1DD2700D60F7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -243,7 +243,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let yPosition = CGFloat(rand.nextInt())
         // this next value affects the width of the gap between rocks
         // make it smaller to make your game harder – if you're feeling evil!
-        let rockDistance: CGFloat = 54
+        let rockDistance: CGFloat = 60
         
         // 4. Position the rocks just off the right edge of the screen, then animate them across to the left edge. When they are safely off the left edge, remove them from the game.
         topRock.position = CGPoint(x: xPosition, y: yPosition + topRock.size.height + rockDistance)
